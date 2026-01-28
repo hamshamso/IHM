@@ -1,0 +1,44 @@
+.root {
+    -fx-background-color: #f2f2f2
+}
+/*MenuBar*/
+.menu-bar {
+    -fx-background-color: #333;
+}
+
+.menu-bar .label{
+    -fx-text-fill: rgb(255, 255, 255);
+    -fx-font-size: 18px;
+}
+/*Table View*/
+.table-view{
+    -fx-background-color:rgb(231, 223, 223);
+    -fx-border-color:#cccccc
+}
+.table-view .column-header-background {
+    -fx-background-color: #dddddd;
+}
+.table-view .table-row-cell:selected{
+    -fx-background-color: #1b6904;
+    -fx-text-fill: white;
+}
+/*Inputs*/
+.text-field{
+    -fx-background-radius: 8;
+    -fx-padding:6;
+}
+/*comboBox*/
+.combo-box{
+    -fx-background-color:#858585
+    -fx-background-radius: 8;
+}
+/*Buttons*/
+.button{
+    -fx-background-color: #006e0f;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-padding:8 16;
+}
+.button:hover{
+    -fx-background-color: #3bfccf;
+}

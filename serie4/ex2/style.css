@@ -1,0 +1,19 @@
+.root{
+    -fx-background-color: #eeeeee
+}
+/*style por les buttons*/
+/*.=tout les buttons*/
+.button{
+    -fx-font-size:14px;
+    -fx-background-color:#4CAF50;
+    -fx-text-fill:white;/*text color*/
+    -fx-padding:8px 15px;
+    -fx-background-radius:10;/*تدوير الزوايا*/
+}
+
+/*style appleque avec un ID*/
+#titleLabel{
+    -fx-font-size:20px;
+    -fx-font-weight:bold;
+    -fx-text-fill:#333333;
+}
