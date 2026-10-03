@@ -6,9 +6,9 @@
 .button{
     -fx-font-size:14px;
     -fx-background-color:#4CAF50;
-    -fx-text-fill:white;/*text color*/
+    -fx-text-fill:white;
     -fx-padding:8px 15px;
-    -fx-background-radius:10;/*تدوير الزوايا*/
+    -fx-background-radius:10;
 }
 
 /*style appleque avec un ID*/
