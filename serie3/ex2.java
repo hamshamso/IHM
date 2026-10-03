@@ -16,21 +16,18 @@ public class ex2 extends Application{
     stg.setTitle("EXO2");
     Circle cercle=new Circle(80,80,40,Color.LIGHTBLUE);
     Pane root=new Pane(cercle);
-        //كي تبدا تسحب في الدائرة
+        //drag event 
         cercle.setOnDragDetected(Event->{
              cercle.startFullDrag();
              //active les mouseDragEvent
             
-        });
-        //كل مرة تجرّ الماوس فوق الدائرة، يتبدّل مركز الدائرة للـX و الـY تاع الماوس
+        }); 
         cercle.setOnMouseDragOver(ev ->{
            
                 cercle.setCenterX(ev.getX());
                 cercle.setCenterY(ev.getY());
-                //getX()getY()إحداثيات الماوس على محور x,y
             
         });
-        //كي تخلّي الماوس (release)، نثبتو الدائرة في المكان الأخير لي وصلّو ليه الماوس
         cercle.setOnMouseDragReleased(ev->{
             
                 cercle.setCenterX(ev.getX());
