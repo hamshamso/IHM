@@ -20,10 +20,10 @@ public class ex9 extends Application{
         Pane pane3=createPane("Pane3",200,0,200,200);
         Pane pane4=createPane("Pane4",200,200,200,200);
         Button button=new Button("cliquer");
-        button.setLayoutX(150);//الموقع الأفقي
-        button.setLayoutY(350);//الموقع العمودي
+        button.setLayoutX(150);//horizontal  
+        button.setLayoutY(350);//vertical 
         pane.getChildren().addAll(pane1,pane2,pane3,pane4,button);
-        addMyEventFilter(pane1,"Pane1");  //إضافة فلتر أحداث لل Pane1
+        addMyEventFilter(pane1,"Pane1");  // add the events to every pane
         addMyEventFilter(pane2,"Pane2");   
         addMyEventFilter(pane3,"Pane3");
         addMyEventFilter(pane4,"Pane4");
@@ -34,14 +34,13 @@ public class ex9 extends Application{
         stg.setScene(scene);
         stg.show();
     }
-    // هذا الكلاس  يقوم بإضافة فلتر أحداث (Event Filter) لكل Pane 
-        void addMyEventFilter(Pane node,String nName){
-        node.addEventFilter(Event.ANY,e ->{//التقاط أي حدث يحدث على ال Pane
-            logEvent(nName,e.getEventType().getName());//طباعة رسالة على الكونسول
+    //costum function for events
+    void addMyEventFilter(Pane node,String nName){
+        node.addEventFilter(Event.ANY,e ->{
+            logEvent(nName,e.getEventType().getName());   
         });
     }
-    //وظيفتها: طباعة رسالة على الكونسول عند وقوع أي حدث
-        void logEvent(String nName,String eType){   //nName: اسم ال Pane  //eType: نوع الحدث   
+        void logEvent(String nName,String eType){//display event name  
         System.out.println("Event capte:"+nName+"("+eType+")");
     }
     Pane createPane(String n,double x,double y,double w,double h){
@@ -50,11 +49,7 @@ public class ex9 extends Application{
         p.getChildren().add(l);
         p.setLayoutX(x);
         p.setLayoutY(y);
-        p.setPrefSize(w,h);//الحجم المفضل
+        p.setPrefSize(w,h); 
         return p;
     }
-    //n=اسم ال Pane
-    //x,y=الموقع    
-    //w,h=العرض والارتفاع   
-    //ترجع Pane جديدة مجهزة بالخصائص المطلوبة
 }
