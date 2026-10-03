@@ -17,17 +17,17 @@ public class MouseDragExample extends Application {
         Scene scene = new Scene(panel, 400, 400);
         panel.setStyle("-fx-background-color: lightgreen;");
 
-        // Mouse Pressed → بدء السحب
+        // Mouse Pressed
         panel.setOnMousePressed(ev -> {
             lbl.setText("Mouse Pressed at: (" + ev.getX() + ", " + ev.getY() + ")");
         });
 
-        // Mouse Dragged → أثناء السحب
+        // Mouse Dragged
         panel.setOnMouseDragged(ev -> {
             lbl.setText("Mouse Dragged at: (" + ev.getX() + ", " + ev.getY() + ")");
         });
 
-        // Mouse Released → انتهاء السحب
+        // Mouse Released 
         panel.setOnMouseReleased(ev -> {
             lbl.setText("Mouse Released at: (" + ev.getX() + ", " + ev.getY() + ")");
         });
