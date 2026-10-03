@@ -14,7 +14,7 @@ public class ex2 extends Application {
         Label lblMessage = new Label();
         // Action du bouton
         btnDireBonjour.setOnAction(e -> {
-            String nom = txtNom.getText().trim();//هذا السطر يلتقط نص المستخدم من TextField ويزيل المسافات الزائدة ثم يخزنه في متغير لاستخدامه لاحقًا.
+            String nom = txtNom.getText().trim();
             if (!nom.isEmpty()) {
                 lblMessage.setText("Bonjour " + nom + " !");
             } else {
@@ -22,7 +22,7 @@ public class ex2 extends Application {
             }
         });
         // Layout
-        FlowPane root = new FlowPane(10, 10);//المسافة الأفقية والعمودية بين العناصر
+        FlowPane root = new FlowPane(10, 10);  
         root.getChildren().addAll(lblNom, txtNom, btnDireBonjour, lblMessage);
         // Scene + Stage
         Scene scene = new Scene(root, 300, 150);
