@@ -9,7 +9,6 @@ import javafx.event.Event;
 import javafx.event.EventType;
 import javafx.event.EventHandler;
 
-// تعريف الحدث المخصص
 class HelloEvent extends Event {
     public static final EventType<HelloEvent> ANY = new EventType<>(Event.ANY, "HELLO_EVENT");
     private final String message;
@@ -31,16 +30,13 @@ public class HelloEventApp extends Application {
         Text output = new Text("Waiting for event...");
         Button btn = new Button("Say Hello");
 
-        // Handler للحدث المخصص
         EventHandler<HelloEvent> handler = e -> {
             output.setText(e.getMessage());
             System.out.println("Event received: " + e.getMessage());
         };
 
-        // ربط الـ Handler بالنص
         output.addEventHandler(HelloEvent.ANY, handler);
 
-        // عند الضغط على الزر، إرسال الحدث المخصص
         btn.setOnAction(e -> output.fireEvent(new HelloEvent("Hello World!")));
 
         root.getChildren().addAll(btn, output);
