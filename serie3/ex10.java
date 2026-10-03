@@ -31,7 +31,6 @@ public class ex10 extends Application {
 
         pane.getChildren().addAll(pane1, pane2, pane3, pane4, button);
 
-        // 🔽 هنا التغيير الوحيد
         addMyEventHandler(pane1, "Pane1");
         addMyEventHandler(pane2, "Pane2");
         addMyEventHandler(pane3, "Pane3");
@@ -46,7 +45,6 @@ public class ex10 extends Application {
         stg.show();
     }
 
-    // 🔹 إضافة Event Handler 
     void addMyEventHandler(Pane node, String nName) {
         node.addEventHandler(Event.ANY, e -> {
             logEvent(nName, e.getEventType().getName());
