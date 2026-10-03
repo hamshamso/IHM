@@ -13,17 +13,17 @@ public class ex4 extends Application {
     @Override
     public void start(Stage stage) {
 
-        // 1️⃣ ObservableList
+        //  ObservableList
         ObservableList<String> levels =
                 FXCollections.observableArrayList("Beginner", "Intermediate", "Advanced"); //default items
-        // 2️⃣ ComboBox 
+        //  ComboBox 
         ComboBox<String> comboBox = new ComboBox<>(levels);
         comboBox.setPromptText("Select a level");
 
-        // 3️⃣ Label
+        //  Label
         Label result = new Label("Selected level: none");
 
-        // 4️⃣ TextField + Add Button
+        //  TextField + Add Button
         TextField input = new TextField();
         input.setPromptText("New level");
         Button addBtn = new Button("Add");
@@ -35,7 +35,7 @@ public class ex4 extends Application {
             }
         });
 
-        // 5️⃣ Remove Button
+        //  Remove Button
         Button removeBtn = new Button("Remove Selected");
 
         removeBtn.setOnAction(e -> {
@@ -46,7 +46,7 @@ public class ex4 extends Application {
         });
 
 
-        // 6️⃣ Selection Listener
+        //  Selection Listener
         // update label on selection change
         comboBox.getSelectionModel().selectedItemProperty().addListener((obs, oldv, newv) ->//for any change in selection 
             {  //newv is the new selected item 
