@@ -16,14 +16,14 @@ public class ex3 extends Application {
         panel.getChildren().addAll(l);
         Scene scene = new Scene(panel, 400, 400);
         panel.setStyle("-fx-background-color: skyblue;");
-        // التعامل مع أحداث الكيبورد
+        // keyboard actions 
         panel.setOnKeyTyped(ev-> {
-                // نعرض الحرف المضغوط في الـ Label
+                //display the clicked key
                 l.setText("Key pressed: " + ev.getCharacter());  
         });
         stg.setScene(scene);
         stg.show();
-        // مهم: لكي يقبل الـ panel ضغطات الكيبورد
+        // prepare the panel to track keyboard clicks 
         panel.requestFocus();
     }
 }
