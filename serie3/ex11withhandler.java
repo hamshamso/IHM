@@ -18,24 +18,22 @@ public class ex11withhandler extends Application {
         Pane root = new Pane();
         root.setPrefSize(400, 400);
 
-        // إضافة بعض الأشكال
         Rectangle rect = new Rectangle(50, 50, 100, 80); // x, y, width, height
-        rect.setFill(Color.LIGHTBLUE);
+        rect.setFill(Color.LIGHTBLUE); // set color
 
         Circle circle = new Circle(250, 150, 50); // centerX, centerY, radius
-        circle.setFill(Color.PINK);
+        circle.setFill(Color.PINK); // set color
 
         root.getChildren().addAll(rect, circle);
 
-        // Handler لكل شكل
         rect.addEventHandler(MouseEvent.MOUSE_CLICKED, e -> {
             System.out.println("Clicked Rectangle!");
-            rect.setFill(Color.GREEN); // تغيير اللون عند الضغط
+            rect.setFill(Color.GREEN);
         });
-
+        //action event
         circle.addEventHandler(MouseEvent.MOUSE_CLICKED, e -> {
             System.out.println("Clicked Circle!");
-            circle.setFill(Color.ORANGE); // تغيير اللون عند الضغط
+            circle.setFill(Color.ORANGE); //change color on click  
         });
 
         Scene scene = new Scene(root);
