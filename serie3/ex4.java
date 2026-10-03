@@ -24,7 +24,6 @@ public class ex4 extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
-        // ضروري لالتقاط ضغطات المفاتيح
         root.requestFocus();
     }
 
