@@ -37,7 +37,7 @@ This repository contains my personal solutions for the **IHM (Interactions Homme
 ## ⚙️ How to Run
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/YourUsername/IHM-Solutions.git](https://github.com/YourUsername/IHM-Solutions.git)
+    git clone [https://github.com/hamshamso/IHM.git](https://github.com/YourUsername/IHM-Solutions.git)
     ```
 2.  **Configure JavaFX:** Ensure you have the JavaFX SDK configured in your IDE.
 3.  **Run:** Execute the `Main.java` file located in each TP folder.
